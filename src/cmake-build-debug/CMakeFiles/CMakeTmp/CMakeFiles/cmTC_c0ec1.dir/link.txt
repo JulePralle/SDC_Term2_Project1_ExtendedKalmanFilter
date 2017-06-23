@@ -1,0 +1,1 @@
+/usr/bin/cc       CMakeFiles/cmTC_c0ec1.dir/feature_tests.c.o  -o cmTC_c0ec1 
