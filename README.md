@@ -1,8 +1,47 @@
-# Extended Kalman Filter Project Starter Code
+# Extended Kalman Filter 
 Self-Driving Car Engineer Nanodegree Program
 
-In this project you will utilize a kalman filter to estimate the state of a moving object of interest with noisy lidar and radar measurements. Passing the project requires obtaining RMSE values that are lower that the tolerance outlined in the project rubric. 
 
+## Introduction
+In this project an extended kalman filter was utilized to estimate the state of a moving object of interest with noisy lidar and radar measurements. 
+
+![udacity_exampleVideo](./udacity_exampleVideo.gif) 
+
+## The Approach
+1. Initializing kalman filter variables
+2. Predicting where the object of interest is going to be after a certain time step
+3. Updating where the object currently is based on sensor measurements
+The predicting and updating steps repeat themselfs in a loop
+4. Calculate the Root Mean Squared Error (RMSE) comparing the kalman filter results with the provided ground truth
+
+## Files and code
+### [/src/main.cpp:](https://github.com/JulePralle/SDC_Term2_Project1_ExtendedKalmanFilter/blob/master/src/main.cpp)
+* communicates with the Udacity Simulator receiving data measurements
+* calls a function to run the kalman filter
+* calls a function to calculate the RMSE
+* reads in the data and sends a sensor measurement to FusionEKF.cpp
+
+### [/src/FusionEKF.cpp:](https://github.com/JulePralle/SDC_Term2_Project1_ExtendedKalmanFilter/blob/master/src/FusionEKF.cpp)
+* initializes the filter
+* calls the predict function
+* calls the update function
+* takes the sensor data and initializes and updates variables
+* uses the efk_ instance to call the predict and update equations
+
+### [/src/kalman_filter.cpp:](https://github.com/JulePralle/SDC_Term2_Project1_ExtendedKalmanFilter/blob/master/src/kalman_filter.cpp)
+* defines the predict function and both update functions for lidar and radar
+* the KF class is defined in this file and in kalman_filter.h
+
+### [/src/tools.cpp:](https://github.com/JulePralle/SDC_Term2_Project1_ExtendedKalmanFilter/blob/master/src/tools.cpp)
+* function to calculate the RMSE and the Jacobian Matrix
+
+
+
+
+
+# Udacity Part
+
+## Project
 This project involves the Term 2 Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
 
 This repository includes two files that can be used to set up and install [uWebSocketIO](https://github.com/uWebSockets/uWebSockets) for either Linux or Mac systems. For windows you can use either Docker, VMware, or even [Windows 10 Bash on Ubuntu](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/) to install uWebSocketIO. 
