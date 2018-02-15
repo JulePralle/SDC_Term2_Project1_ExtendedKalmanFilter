@@ -1,6 +1,6 @@
 # Extended Kalman Filter 
 Self-Driving Car Engineer Nanodegree Program
-
+---
 
 ## Introduction
 In this project an extended kalman filter was utilized to estimate the state of a moving object of interest with noisy lidar and radar measurements. 
@@ -15,24 +15,24 @@ The predicting and updating steps repeat themselfs in a loop
 4. Calculate the Root Mean Squared Error (RMSE) comparing the kalman filter results with the provided ground truth
 
 ## Files and code
-### [/src/main.cpp:](https://github.com/JulePralle/SDC_Term2_Project1_ExtendedKalmanFilter/blob/master/src/main.cpp)
+#### [/src/main.cpp:](https://github.com/JulePralle/SDC_Term2_Project1_ExtendedKalmanFilter/blob/master/src/main.cpp)
 * communicates with the Udacity Simulator receiving data measurements
 * calls a function to run the kalman filter
 * calls a function to calculate the RMSE
 * reads in the data and sends a sensor measurement to FusionEKF.cpp
 
-### [/src/FusionEKF.cpp:](https://github.com/JulePralle/SDC_Term2_Project1_ExtendedKalmanFilter/blob/master/src/FusionEKF.cpp)
+#### [/src/FusionEKF.cpp:](https://github.com/JulePralle/SDC_Term2_Project1_ExtendedKalmanFilter/blob/master/src/FusionEKF.cpp)
 * initializes the filter
 * calls the predict function
 * calls the update function
 * takes the sensor data and initializes and updates variables
 * uses the efk_ instance to call the predict and update equations
 
-### [/src/kalman_filter.cpp:](https://github.com/JulePralle/SDC_Term2_Project1_ExtendedKalmanFilter/blob/master/src/kalman_filter.cpp)
+#### [/src/kalman_filter.cpp:](https://github.com/JulePralle/SDC_Term2_Project1_ExtendedKalmanFilter/blob/master/src/kalman_filter.cpp)
 * defines the predict function and both update functions for lidar and radar
 * the KF class is defined in this file and in kalman_filter.h
 
-### [/src/tools.cpp:](https://github.com/JulePralle/SDC_Term2_Project1_ExtendedKalmanFilter/blob/master/src/tools.cpp)
+#### [/src/tools.cpp:](https://github.com/JulePralle/SDC_Term2_Project1_ExtendedKalmanFilter/blob/master/src/tools.cpp)
 * function to calculate the RMSE and the Jacobian Matrix
 
 
