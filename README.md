@@ -5,21 +5,23 @@ Self-Driving Car Engineer Nanodegree Program
 ---
 
 ## Introduction
-In this project an extended kalman filter was utilized to estimate the state of a moving object in the udacity simulator with noisy lidar and radar measurements. 
+In this project an extended Kalman filter was utilized to estimate the state of a moving object in the udacity simulator with noisy lidar and radar measurements. 
+
+The video below shows what the simulator looks like when a c++ script is using its Kalman filter to track the object. Lidar measurements are red circles, radar measurements are blue circles with an arrow pointing in the direction of the observed angle, and estimation markers are green triangles. The simulator provides the script the measured data (either lidar or radar), and the script feeds back the measured estimation marker, and Root Mean Squared Error (RMSE) values from its Kalman filter.
 
 ![udacity_exampleVideo](./udacity_exampleVideo.gif) 
 
 ## The Approach
-1. Initializing kalman filter variables
+1. Initializing Kalman filter variables
 2. Predicting where the object of interest is going to be after a certain time step
 3. Updating where the object currently is based on sensor measurements
    The predicting and updating steps repeat themselfs in a loop
-4. Calculate the Root Mean Squared Error (RMSE) comparing the kalman filter results with the provided ground truth
+4. Calculate the Root Mean Squared Error (RMSE) comparing the Kalman filter results with the provided ground truth
 
 ## Files and code
 #### [/src/main.cpp:](https://github.com/JulePralle/SDC_Term2_Project1_ExtendedKalmanFilter/blob/master/src/main.cpp)
 * communicates with the Udacity Simulator receiving data measurements
-* calls a function to run the kalman filter
+* calls a function to run the Kalman filter
 * calls a function to calculate the RMSE
 * reads in the data and sends a sensor measurement to FusionEKF.cpp
 
