@@ -44,7 +44,7 @@ The video below shows what the simulator looks like when a c++ script is using i
 
 
 # Udacity Part
-
+---
 ## Project
 This project involves the Term 2 Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
 
